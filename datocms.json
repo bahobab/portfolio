@@ -1,0 +1,11 @@
+{
+  "name": "North Pond 365 - 360",
+  "description": "Chicago Lincoln Park North Pond Community Photo Portfolio",
+  "previewImage": "https://www.datocms-assets.com/205/1584546486-screen-shot-2020-03-18-at-16-47-38-fullpage.png?crop=top&fit=crop&h=500&w=600&auto=format",
+  "datocmsProjectId": "604",
+  "deploymentType": "static",
+  "buildCommand": "npm run build",
+  "datocmsApiTokenEnvName": "process.env.DATO_API_TOKEN",
+  "buildDirectory": "public",
+  "livePreviewUrl": ""
+}
