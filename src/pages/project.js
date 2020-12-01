@@ -8,17 +8,17 @@ const IndexPage = ({data}) => (
   <Layout>
     <Masonry className="showcase">
       {data
-        .allDatoCmsNorthpond
+        .allDatoCmsProject
         .edges
         .map(({node: work}) => (
           <div key={work.id} className="showcase__item">
             <figure className="card">
-              <Link to={`/northpond/${work.slug}`} className="card__image">
+              <Link to={`/project/${work.slug}`} className="card__image">
                 <Img fluid={work.coverImage.fluid}/>
               </Link>
               <figcaption className="card__caption">
                 <h6 className="card__title">
-                  <Link to={`/northpond/${work.slug}`}>{work.title}</Link>
+                  <Link to={`/project/${work.slug}`}>{work.title}</Link>
                 </h6>
                 <div className="card__description">
                   <p>{work.excerpt}</p>
@@ -34,8 +34,8 @@ const IndexPage = ({data}) => (
 export default IndexPage
 
 export const query = graphql `
-  query IndexQuery {
-    allDatoCmsNorthpond{
+  query IndexQueryAndIndexQueryAndIndexQueryAndIndexQuery {
+    allDatoCmsProject{
       edges {
         node {
           id

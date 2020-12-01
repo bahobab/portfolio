@@ -8,25 +8,25 @@ import Layout from "../components/layout"
 export default({data}) => (
   <Layout>
     <article className="sheet">
-      <HelmetDatoCms seo={data.datoCmsNorthpond.seoMetaTags}/>
+      <HelmetDatoCms seo={data.datoCmsReportage.seoMetaTags}/>
       <div className="sheet__inner">
-        <h1 className="sheet__title">{data.datoCmsNorthpond.title}</h1>
-        <p className="sheet__lead">{data.datoCmsNorthpond.excerpt}</p>
+        <h1 className="sheet__title">{data.datoCmsReportage.title}</h1>
+        <p className="sheet__lead">{data.datoCmsReportage.excerpt}</p>
         <div className="sheet__slider">
           <Slider infinite={true} slidesToShow={1} arrows autoplay>
             {data
-              .datoCmsNorthpond
+              .datoCmsReportage
               .gallery
-              .map(({fluid}) => (<img alt={data.datoCmsNorthpond.title} key={fluid.src} src={fluid.src}/>))}
+              .map(({fluid}) => (<img alt={data.datoCmsReportage.title} key={fluid.src} src={fluid.src}/>))}
           </Slider>
         </div>
         <div
           className="sheet__body"
           dangerouslySetInnerHTML={{
-          __html: data.datoCmsNorthpond.descriptionNode.childMarkdownRemark.html
+          __html: data.datoCmsReportage.descriptionNode.childMarkdownRemark.html
         }}/>
         <div className="sheet__gallery">
-          <Img fluid={data.datoCmsNorthpond.coverImage.fluid}/>
+          <Img fluid={data.datoCmsReportage.coverImage.fluid}/>
         </div>
       </div>
     </article>
@@ -34,8 +34,8 @@ export default({data}) => (
 )
 
 export const query = graphql `
-  query NorthpondQuery($slug: String!) {
-    datoCmsNorthpond(slug: { eq: $slug }) {
+  query ReportageQuery($slug: String!) {
+    datoCmsReportage(slug: { eq: $slug }) {
       seoMetaTags {
         ...GatsbyDatoCmsSeoMetaTags
       }
