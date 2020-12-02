@@ -28,6 +28,7 @@ export default({data}) => (
         <div className="sheet__gallery">
           <Img fluid={data.datoCmsReportage.coverImage.fluid}/>
         </div>
+        <img src={`https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s-l+000(${data.datoCmsReportage.location.longitude},${data.datoCmsReportage.location.latitude})/${data.datoCmsReportage.location.longitude},${data.datoCmsReportage.location.latitude},14/500x300?access_token=pk.eyJ1Ijoia2hvb3BoZGV2IiwiYSI6ImNraTZqbjUyOTBnOTcycG5nenVkZXBtYW0ifQ.MZ6fU33ZTPhwzYSWcgz4Tw`} alt="Map of the North Pond" style={{width: '100%'}}></img>
       </div>
     </article>
   </Layout>
@@ -41,6 +42,10 @@ export const query = graphql `
       }
       title
       excerpt
+      location {
+        latitude
+        longitude
+      }
       gallery {
         fluid(maxWidth: 200, imgixParams: { fm: "jpg", auto: "compress" }) {
           src

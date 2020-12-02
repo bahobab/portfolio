@@ -14,7 +14,7 @@ const TemplateWrapper = ({children}) => {
   // (sort: { fields: position, order: ASC })
   return (
     <StaticQuery
-      query={graphql ` query LayoutQuery { datoCmsSite { globalSeo { siteName } faviconMetaTags { ...GatsbyDatoCmsFaviconMetaTags } } datoCmsHome { seoMetaTags { ...GatsbyDatoCmsSeoMetaTags } introTextNode { childMarkdownRemark { html } } copyright } allDatoCmsSocialProfile { edges { node { profileType url } } } } `}
+      query={graphql ` query LayoutQuery { datoCmsSite { globalSeo { siteName } faviconMetaTags { ...GatsbyDatoCmsFaviconMetaTags } } datoCmsHome { seoMetaTags { ...GatsbyDatoCmsSeoMetaTags } introTextNode { childMarkdownRemark { html } } copyright location {latitude longitude} } allDatoCmsSocialProfile { edges { node { profileType url } } } } `}
       render={data => (
       <div className={`container ${showMenu
         ? "is-open"
@@ -65,6 +65,8 @@ const TemplateWrapper = ({children}) => {
             <div className="sidebar__copyright">
               {data.datoCmsHome.copyright}
             </div>
+            {/* <pre>{ JSON.stringify(data.datoCmsHome.location)}</pre> */}
+            <img src="https://api.mapbox.com/styles/v1/mapbox/light-v10/static/pin-s-l+000(-87.6374652,41.9298705)/-87.6374652,41.9298705,14/500x300?access_token=pk.eyJ1Ijoia2hvb3BoZGV2IiwiYSI6ImNraTZqbjUyOTBnOTcycG5nenVkZXBtYW0ifQ.MZ6fU33ZTPhwzYSWcgz4Tw" alt="Map of the North Pond"  style={{width: '100%', marginTop: '15px'}}></img>
           </div>
         </div>
         <div className="container__body">
