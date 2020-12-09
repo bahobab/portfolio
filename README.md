@@ -1,20 +1,18 @@
-# Gatsby Portfolio Website
-&#39;
-This repo contains a static website written with [GatsbyJS](https://www.gatsbyjs.org/), integrated with content coming from [DatoCMS](https://www.datocms.com).
+# North Pond Photo Gallery - Portfolio
 
-![Preview](preview.png)
+## About
 
-[See the live demo](https://demo-datocms-gatsby.netlify.com/)
+The goal of this project is to support the efforts to protect and revive the parks around the North Pond.
+This project also include photography projects that I have done in the neighborhood and abroad over many years.
 
-If you want to use try this out yourself, you first need to set up a project on DatoCMS which will host your data.
+Finally, I included a portolio page to showcase some of my web development works.
 
-You can [sign up for a free account](https://dashboard.datocms.com/signup) and then you can simply click this button:
+[See the live project](https://northpond365-360.vercel.app/)
 
-[![Deploy with DatoCMS](https://dashboard.datocms.com/deploy/button.svg)](https://dashboard.datocms.com/projects/new-from-template/static-website/gatsby-portfolio)
-
+![](chitroen1.png)
 ## Repo usage
 
-First, install the dependencies of this project:
+First, clone repo and install the dependencies of this project:
 
 ```
 npm install
@@ -40,13 +38,5 @@ npm run build
 
 The final result will be saved in the `public` directory.
 
-## About
+You can find further information about how to integrate DatoCMS with Gatsby in [DatoCMS documentation](https://www.datocms.com/docs/static-generators/gatsbyjs).
 
-The goal of this project is to show how easily you can create static sites using the content (text, images, links, etc.) stored on [DatoCMS](https://www.datocms.com). This project is configured to fetch data from a specific administrative area using [the API DatoCMS provides](https://www.datocms.com/docs/content-management-api).
-
-You can find further information about how to integrate DatoCMS with Gatsby in [our documentation](https://www.datocms.com/docs/static-generators/gatsbyjs).
-
-This websites uses:
-
-- [GatsbyJS](https://github.com/gatsbyjs/gatsby) as website generator;
-- [gatsby-source-datocms](https://github.com/datocms/gatsby-source-datocms) to integrate the website with DatoCMS.
