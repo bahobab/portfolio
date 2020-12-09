@@ -9,7 +9,7 @@ Finally, I included a portolio page to showcase some of my web development works
 
 [See the live project](https://northpond365-360.vercel.app/)
 
-![](chitroen1.png)
+![](./portfolio.jpg)
 ## Repo usage
 
 First, clone repo and install the dependencies of this project:
